@@ -19,6 +19,8 @@ class Tetris:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self._running = False
+                if event.type == pygame.KEYDOWN:
+                    pass
             self._board.update()
             self._screen.fill("black")
             self._board.draw()
@@ -28,4 +30,3 @@ class Tetris:
             self._screen.blit(text_surface, (500, 150))         
         pygame.quit()
 
-Tetris().run()
