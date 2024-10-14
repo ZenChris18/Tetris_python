@@ -14,10 +14,12 @@ class Tetris:
         self.run()
 
     def run(self):
+        counter = 0
         while self._running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self._running = False
+            self._board.update()
             self._screen.fill("black")
             self._board.draw()
             pygame.display.flip()   
